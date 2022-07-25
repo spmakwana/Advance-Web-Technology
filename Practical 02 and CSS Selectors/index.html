@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>CSS Selectors</title>
+</head>
+
+<body>
+	<section>
+		<a href="http://www.google.com" class="links">Home</a>
+		<a href="http://www.google.com" class="link" target="_blank">ABC</a>
+		<a href="about.html" class="links">DEF</a>
+		<a href="https://www.microsoft.com" class="link-abc">GHI</a>
+		<a href="" target="_blank">New Link</a>
+	</section>
+	<section>
+		<p class="id1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, quis quisquam voluptatem, voluptatum quaerat non culpa eveniet at esse asperiores, explicabo cumque ut! Atque esse repellat quo reiciendis soluta!</p>
+	</section>
+	Home > Student > Result
+	<section>
+		<h1 class="hero" id="mainheading">This is heading of Page</h1>
+		<h2 class="heading">Sub heading 1</h2>
+		<h1></h1>
+		<h2 class="heading">Sub heading 2</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto velit, eius autem modi nihil nesciunt esse molestias laudantium ipsum doloribus perferendis consequuntur ut dicta assumenda magni alias totam tenetur placeat!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorum aspernatur doloribus ipsa sequi unde facere iure tenetur cum eveniet magnam, consequatur dolor excepturi provident, perferendis exercitationem? Obcaecati, necessitatibus omnis.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore exercitationem aperiam, accusantium adipisci iusto cum unde provident culpa, sapiente amet labore saepe a consequuntur dolores minima? Non, aliquid placeat?</p>
+	</section>
+	<section>
+		<div id="parentdiv" class="first">
+			<p class="second">This is first paragraph</p>
+			<p>This is section paragraph</p>
+			<span>
+				<p>This is third paragraph under div</p>
+			</span>
+			<p class="second">This is fourth paragraph</p>
+		</div>
+	</section>
+	<section class="class1 class2">
+		<ul class="second">
+			<li class="second">Unordered List Item 1</li>
+			<li>Unordered List Item 2
+				<ul>
+					<li>Sub List Item 1</li>
+					<li>Sub List Item 2</li>
+					<li>Sub List Item 3</li>
+					<li>Sub List Item 4</li>
+				</ul>
+			</li>
+			<li>Unordered List Item 3</li>
+			<li>Unordered List Item 4</li>
+			<li>Unordered List Item 5</li>
+		</ul>
+	</section>
+	<section>
+		<ol>
+			<li>Ordered List Item 1</li>
+			<li>Ordered List Item 2</li>
+			<li>Ordered List Item 3</li>
+			<li>Ordered List Item 4</li>
+			<li>Ordered List Item 1</li>
+			<li>Ordered List Item 2</li>
+			<li>Ordered List Item 3</li>
+			<li>Ordered List Item 4</li>
+			<li>Ordered List Item 1</li>
+			<li>Ordered List Item 2</li>
+			<li>Ordered List Item 3</li>
+			<li>Ordered List Item 4</li>
+		</ol>
+	</section>
+	<section class="AS">
+		<h1>Adjacent Siblings &amp; General Siblings</h1>
+		<div class="box"></div>
+		<div class="box"></div>
+		<a href="">This is not box</a>
+		<div class="box"></div>
+		<div class="box"></div>
+	</section>
+	<section class="GS">
+		<h1>General Siblings</h1>
+		<div class="box"></div>
+		<div class="box"></div>
+		<a href="#">Not a box</a>
+		<a href="#">Not a box</a>
+		<a href="#">Not a box</a>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</section>
+	<section>
+		<form action="#" method="get">
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td><input type="radio" name="gender" id="gender" value="1"> <label for="gender">Male</label>
+						<input type="radio" name="gender" id="gender" value="2"> Female <br></td>
+				</tr>
+				<tr>
+					<td>Hobby</td>
+					<td><input type="checkbox" name="hobby1" id="hobby2"><span>Photography</span> <br>
+						<input type="checkbox" name="hobby2" id="hobby2"> <span>Cycling</span> <br>
+						<input type="checkbox" name="hobby3" id="hobby3"> <span>Reading</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td><input type="text" name="country" id="country" value="India" disabled></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit Data"></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+	<section>
+		<table id="table1" class="table">
+			<tr class="heading">
+				<th>Heading 001</th>
+				<th>Heading 002</th>
+				<th>Heading 003</th>
+				<th>Heading 004</th>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+			<tr>
+				<td>Table description 01</td>
+				<td>Table description 02</td>
+				<td>Table description 03</td>
+				<td>Table description 04</td>
+			</tr>
+		</table>
+	</section>
+</body>
+
+</html>
