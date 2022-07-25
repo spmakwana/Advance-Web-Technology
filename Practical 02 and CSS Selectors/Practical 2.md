@@ -1,6 +1,6 @@
 # Create an HTML page with external CSS. Make page and format it according to below instructions.
 
-# 1. HTML page should contains website logo on top left corner. Give ID to logo and set height and width of logo using ID selector.
+1. HTML page should contains website logo on top left corner. Give ID to logo and set height and width of logo using ID selector.
 1. Use universal selector to set the font family of page.
 3. Use element selector to select body tag and set the background olor of page.
 4. Put 5 images on the page and set height and width of everyimage by giving some class to images
