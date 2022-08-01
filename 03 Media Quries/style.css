@@ -1,0 +1,53 @@
+img {
+	width: 30%;
+}
+
+@media (max-width: 900px) {
+	img {
+		width: 45%;
+	}
+}
+
+@media (max-width: 500px) {
+	img {
+		width: 100%;
+	}
+}
+
+
+
+
+/* Media Quries */
+/* Target Media Types */
+
+/* Print Media */
+/* @media print { ... } */
+
+/* @media screen {
+	#img1 {
+		display: none;
+	}
+} */
+
+/* Screen Media */
+/* @media screen { ... } */
+
+/* Screen and Print both Media */
+/* @media screen, print { ... } */
+
+/* Target Width */
+/* @media (min-width: xxx px) { … } */
+
+/* @media (max-width: xxx px) { … } */
+
+
+/* @media (min-width: 30em) and (max-width: 50em) { … } */
+
+
+/* In Media Query 4 */
+/* @media (max-width: xxx px) { … } */
+/* equals */
+/* @media (width <= 30em) {  …  } */
+
+/* @media (min-width: 30em) and (max-width: 50em) { … } */
+/* @media (30em <= width <= 50em ) {  …  } */
