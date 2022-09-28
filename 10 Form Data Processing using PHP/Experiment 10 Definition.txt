@@ -1,0 +1,13 @@
+Create a form with following fields
+Name, Enrollment No., Address, Class, Course, Mobile No.
+
+Put below validation:
+All the data must be filled
+En. No and Mobile No should be numeric
+Course should be one of the following (CE, IT, CI, ME, CH, EE)
+
+if all data is correct save it to a file.
+
+Display the proper error or success message at proper place.
+
+Optional: Format the form and message using CSS
