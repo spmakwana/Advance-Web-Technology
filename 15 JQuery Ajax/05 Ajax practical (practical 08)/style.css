@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+#webtitle {
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: limegreen;
+	padding: 1em
+}
+
+.container {
+	display: flex;
+}
+
+.sideleft {
+	width: 40%;
+	padding: 2em;
+}
+
+.sideright {
+	width: 60%;
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.sideright img {
+	width: 45%;
+}
+
+.tenniscore {
+	border-collapse: collapse;
+}
+
+.tenniscore td,
+.tenniscore th {
+	padding: 0.5em 2em;
+}
+
+.tenniscore tr:nth-child(odd) {
+	background-color: olive;
+}
+
+.tenniscore tr:nth-child(even) {
+	background-color: limegreen;
+}
+
+@media (max-width: 500px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.sideleft {
+		width: 100%;
+		padding: 1em;
+	}
+
+	.sideright {
+		width: 100%;
+		padding: 1em;
+
+	}
+}

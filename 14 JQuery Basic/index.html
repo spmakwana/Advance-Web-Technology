@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.testclass {
+			background-color: limegreen;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<button id="button1" class="btn">Button 1</button>
+	<button id="button2" class="btn">Button 2</button>
+	<button id="button3" class="btn">Button 3</button>
+	<br>
+	First Name: <input class="textbox" type="text" name="text1" id="text1"><span id="error"></span>
+	<br><br>
+	Second Name: <input class="textbox" type="text" name="text2" id="text2">
+	<h1 id="firstheading">This is heading</h1>
+	<h1 id="heading1">This is second heading</h1>
+	<h1 class="headings">This is third heading</h1>
+	<p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, itaque? Accusamus quam illo tempora doloribus, libero, dicta vel iure error laboriosam animi odio laudantium expedita ducimus sapiente. Est, perferendis dolor?</p>
+	<ul>
+		<li>List Item 001</li>
+		<li>List Item 002</li>
+		<li>List Item 003</li>
+	</ul>
+
+	<ol>
+		<li>List Item 001</li>
+		<li>List Item 002</li>
+		<li>List Item 003</li>
+	</ol>
+	<div id="mydiv">
+		<a href="http://www.google.com">Google</a>
+	</div>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Select elements
+			// $("#btn")
+
+			// $('h1').css("color", "blue")
+			// ID selector
+			// $("#heading1").css("color", "green");
+			//Class selector
+			// $(".headings").css("color", "green");
+			// $("ul li:first").css("background-color", "yellow");
+			// $("ul li:last").css("background-color", "yellow");
+			// $("ul li:even").css("background-color", "yellow");
+			// $("ul li:odd").css("background-color", "red");
+			// $("ul li:nth-child(3n)").css("background-color", "red");
+			// $("ol li:nth-child(6)").css("list-style", "none")
+			// $(ul li:nth-child(3)").css("list-style:none");
+
+
+
+			// $("#button1").click(function () {
+			// 	$("#error").html("Username is already exists");
+			// });
+
+			// $("#button1").on("click", function () {
+			// 	$("#firstheading").hide();
+			// })
+
+			// $("#button2").click(function () {
+			// 	$("#firstheading").show();
+			// });
+
+			// $("#button3").click(function () {
+			// 	$("#heading1").toggle();
+			// });
+
+			// $("#button3").dblclick(function () {
+			// 	alert("you have double clicked button 3")
+			// })
+
+			// $("#button3").hover(function () {
+			// 	alert("you have double clicked button 3")
+			// })
+
+
+
+			// $(".btn").click(function (e) {
+			// 	console.log(e.currentTarget.className);
+			// });
+
+			// $(document).on("mousemove", function (e) {
+			// 	$("#firstheading").html("Coords: X" + e.clientX + ", Y: " + e.clientY);
+			// });
+
+			$(".textbox").focus(function () {
+				$(this).css("background-color", "#DDDDDD")
+			});
+
+			$(".textbox").blur(function (e) {
+				$(this).css("background-color", "#FFFFFF")
+			});
+
+
+			// $("#firstheading").text("This is modified heading");
+
+			// $("#mydiv").html("<h1>This is new heading in my div</h1>");
+
+			$("#button1").click(function () {
+				$("ul").append("<li>new item added</li>");
+
+			})
+
+			// $("ul").append("<li>new item added</li>");
+			// $("ul").prepend("<li>new item added first</li>");
+
+			// $("ul").after("<h2>Below is ordered list</h2>");
+			// $("ul").before("<h2>Below is unordered list</h2>");
+
+			// $("ul").empty();
+			// $("ol").detach();
+
+
+			// $("li").css("background-color", "#DDD");
+
+			// $("#firstheading").addClass("testclass");
+			// $("#firstheading").removeClass("testclass");
+			// $("a").attr("target", "_blank");
+			// $("a").removeAttr("href");
+
+		});
+	</script>
+</body>
+
+</html>

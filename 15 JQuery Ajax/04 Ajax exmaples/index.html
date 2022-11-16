@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script>
+		$(function () {
+			// $("#data").load("dummydata.html", function (responsetext, statustext, xhrobject) {
+			// 	if (statustext == "success") {
+			// 		alert("success");
+			// 	} else if (statustext == "error") {
+			// 		alert("error" + xhrobject.status + xhrobject.statusText);
+			// 	}
+			// });
+			$.get("dummyddata.html", function (data, textStatus, jqXHR) {
+				console.log(jqXHR);
+				$("#data").html(data + textStatus);
+			});
+
+			$("#myform").submit(function (e) {
+				e.preventDefault();
+				$.get("dummyddata.html", {
+						"name": $("#fname").val(),
+						"address": $("#address").val(),
+					},
+					function (data, textStatus, jqXHR) {
+						console.log(jqXHR);
+						// $("#data").html(data + textStatus);
+					}
+				);
+			})
+
+			function LoadTennisScore() {
+				$.post("tennis.html",
+					function (data, textStatus, jqXHR) {
+						$("#tennisscore").html(data);
+					}
+				);
+			}
+			setInterval(LoadTennisScore, 2000);
+		});
+	</script>
+</head>
+
+<body>
+
+	<form id="myform">
+		Name: <input type="text" name="fname" id="fname"><br>
+		Address: <textarea name="address" id="address" cols="30" rows="3"></textarea><br>
+		<input type="submit" value="submit form">
+	</form>
+	<div id="data">
+
+	</div>
+
+	<di id="tennisscore">
+
+	</di>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<style>
+	pre {
+		background-color: #ddd;
+		line-height: 1.3rem;
+	}
+</style>
+
+<h1 id="jquery">JQuery</h1>
+<h2 id="what-is-jquery-">What is jQuery?</h2>
+<ul>
+<li>jQuery is a small, fast and feature-rich JavaScript library.</li>
+<li>jQuery makes things like DOM manipulation, even handling and Ajax MUCH easier</li>
+<li>Much less code</li>
+</ul>
+<h2 id="what-you-should-know-">What you should know?</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+<h2 id="what-you-will-learn">What you will learn</h2>
+<ul>
+<li>Selector</li>
+<li>Event Handling</li>
+<li>Dom Manipulation</li>
+<li>Methods</li>
+<li>AJAX</li>
+</ul>
+<h2 id="selectors">Selectors</h2>
+<pre><code class="lang-javascript">$(<span class="hljs-string">'h1'</span>).<span class="hljs-keyword">hide</span>();
+$(<span class="hljs-string">'h1#heading1'</span>).<span class="hljs-keyword">hide</span>();
+$(<span class="hljs-string">'.heading2'</span>).<span class="hljs-keyword">hide</span>();
+$(<span class="hljs-string">'p span'</span>).css(<span class="hljs-string">'color'</span>, <span class="hljs-string">'red'</span>);
+$(<span class="hljs-string">'ul#list li:first'</span>).css(<span class="hljs-string">'color'</span>, <span class="hljs-string">'red'</span>);
+$(<span class="hljs-string">'ul#list li:last'</span>).css(<span class="hljs-string">'color'</span>, <span class="hljs-string">'green'</span>);
+$(<span class="hljs-string">'ul#list li:even'</span>).css(<span class="hljs-string">'background-color'</span>, <span class="hljs-string">'yellow'</span>);
+$(<span class="hljs-string">'ul#list li:odd'</span>).css(<span class="hljs-string">'background-color'</span>, <span class="hljs-string">'#cccccc'</span>);
+$(<span class="hljs-string">'ul#list li:nth-child(3n)'</span>).css(<span class="hljs-string">'list-style'</span>, <span class="hljs-string">'none'</span>);
+$(<span class="hljs-string">'*'</span>).<span class="hljs-keyword">hide</span>();
+</code></pre>
+<h2 id="events">Events</h2>
+<pre><code class="lang-javascript">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+
+    $(<span class="hljs-string">'#btn1'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        alert(<span class="hljs-string">'Button Clicked!'</span>);
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        alert(<span class="hljs-string">'Button Clicked!'</span>);
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-comment">//$('.para1').hide();</span>
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+    $(<span class="hljs-string">'#btn2'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).show();
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).dblclick(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).hover(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).on(<span class="hljs-string">'mouseenter'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).on(<span class="hljs-string">'mouseleave'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+
+    $(<span class="hljs-string">'#btn1'</span>).on(<span class="hljs-string">'mouseup'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        $(<span class="hljs-string">'.para1'</span>).toggle();
+    });
+
+    $(<span class="hljs-string">'#btn1'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-comment">//alert(e.currentTarget.id);</span>
+        <span class="hljs-comment">//alert(e.currentTarget.innerHTML);</span>
+        <span class="hljs-comment">//alert(e.currentTarget.outerHTML);</span>
+        <span class="hljs-comment">//alert(e.currentTarget.className);</span>
+    });
+
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">'mousemove'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        $(<span class="hljs-string">'#coords'</span>).html(<span class="hljs-string">'Coords: Y: '</span>+e.clientY+<span class="hljs-string">" X: "</span>+e.clientX);
+    });
+
+    $(<span class="hljs-string">'input'</span>).focus(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-comment">//alert('Focus');</span>
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">'background'</span>, <span class="hljs-string">'pink'</span>);
+    });
+
+    $(<span class="hljs-string">'input'</span>).blur(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-comment">//alert('Focus');</span>
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">'background'</span>, <span class="hljs-string">'white'</span>);
+    });
+
+    $(<span class="hljs-string">'input'</span>).keyup(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(e.target.value);
+    });
+
+    $(<span class="hljs-string">'select#gender'</span>).change(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        alert(e.target.value);
+    });
+
+    $(<span class="hljs-string">'#form'</span>).submit(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        e.preventDefault();
+        <span class="hljs-keyword">var</span> name = $(<span class="hljs-string">'input#name'</span>).val();
+        <span class="hljs-built_in">console</span>.log(name);
+    });
+});
+</code></pre>
+<h1 id="dom-manipulation">DOM Manipulation</h1>
+<pre><code class="lang-javascript">$(<span class="hljs-string">'p.para1'</span>).css(<span class="hljs-string">'color'</span>, <span class="hljs-string">'red'</span>);
+$(<span class="hljs-string">'p.para1'</span>).css({<span class="hljs-attr">color</span>:<span class="hljs-string">'red'</span>,<span class="hljs-attr">background</span>:<span class="hljs-string">'#ccc'</span>});
+
+$(<span class="hljs-string">'p.para2'</span>).addClass(<span class="hljs-string">'myClass'</span>);
+$(<span class="hljs-string">'p.para2'</span>).removeClass(<span class="hljs-string">'myClass'</span>);
+
+$(<span class="hljs-string">'#btn1'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    $(<span class="hljs-string">'p.para2'</span>).toggleClass(<span class="hljs-string">'myClass'</span>);
+});
+
+$(<span class="hljs-string">'#myDiv'</span>).text(<span class="hljs-string">'Hello World'</span>);
+$(<span class="hljs-string">'#myDiv'</span>).html(<span class="hljs-string">'&lt;h3&gt;Hello World&lt;/h3&gt;'</span>);
+alert($(<span class="hljs-string">'#myDiv'</span>).text());
+
+$(<span class="hljs-string">'ul'</span>).append(<span class="hljs-string">'&lt;li&gt;Append List Item&lt;/li&gt;'</span>);
+$(<span class="hljs-string">'ul'</span>).prepend(<span class="hljs-string">'&lt;li&gt;Prepend List Item&lt;/li&gt;'</span>);
+
+$(<span class="hljs-string">'ul'</span>).before(<span class="hljs-string">'&lt;h4&gt;Hello&lt;/h4&gt;'</span>);
+$(<span class="hljs-string">'ul'</span>).after(<span class="hljs-string">'&lt;h4&gt;World&lt;/h4&gt;'</span>);
+
+$(<span class="hljs-string">'ul'</span>).empty();
+$(<span class="hljs-string">'ul'</span>).detach();
+
+$(<span class="hljs-string">'a'</span>).attr(<span class="hljs-string">'target'</span>, <span class="hljs-string">'_blank'</span>);
+alert($(<span class="hljs-string">'a'</span>).attr(<span class="hljs-string">'href'</span>));
+$(<span class="hljs-string">'a'</span>).removeAttr(<span class="hljs-string">'target'</span>);
+</code></pre>
